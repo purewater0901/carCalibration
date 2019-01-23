@@ -24,7 +24,7 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 - plotly >= 2.5.1
 
 ## Usage
-- 'python src/main.py'
+- `python src/main.py`
 
 ## References
 https://arxiv.org/abs/1808.10134
