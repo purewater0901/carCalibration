@@ -10,7 +10,7 @@
   - Brake Model
   
 ## Description
-"carCalibration" will show you how to build a data-driven longitudinal control system by machine-learning. 
+_carCalibration_ will show you how to build a data-driven longitudinal control system by machine-learning. 
   
 ## Dependency
 - numpy >= 1.15.4
@@ -22,6 +22,9 @@
 ###### if you wish to use matplotlib or plotly then you should use
 - matplotlib >= 2.2.2
 - plotly >= 2.5.1
+
+## Usage
+- 'python src/main.py'
 
 ## References
 https://arxiv.org/abs/1808.10134
