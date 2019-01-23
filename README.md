@@ -29,7 +29,7 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 - run the following command
 `python src/main.py`
 
-####### The output will be shown in result directory
+###### The output will be shown in result directory
 
 ## References
 https://arxiv.org/abs/1808.10134
