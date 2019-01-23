@@ -15,6 +15,7 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 ## Dependency
 - numpy >= 1.15.4
 - pandas >= 0.22.0
+- scipy >= 1.2.0
 - tensorflow >= 1.7.0
 - keras >= 2.1.6
 - python3
@@ -25,11 +26,11 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 
 ## Usage
 - Prepare your csv File
-- copy Csv file under the data directory
+- copy csv file under the data directory
 - run the following command
 `python src/main.py`
 
-###### The output will be shown in result directory
+###### Output will be in the result directory
 
 ## References
 https://arxiv.org/abs/1808.10134
