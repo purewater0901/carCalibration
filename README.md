@@ -25,6 +25,11 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 - plotly >= 2.5.1
 
 ## Usage
+
+### Input CSV 
+| %time | accel | brake | speed | steer | leftWheelSpeed | rightWheelSpeed | 
+----- | ----- | ----- | ----- | ----- | -----| ----- |
+
 - Prepare your csv File
 - copy csv file under the data directory
 - run the following command
