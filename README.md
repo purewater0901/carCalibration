@@ -50,9 +50,9 @@ You need x, y, z direction acceleration and pitch angle
 
 ### Output Csv
 - Result will output in the 'result/' directory 
-- Output csv file will be below. You will two type csv. (Brake and Throttle)
+- Output csv file will be below. You will get two type csv. (Brake and Throttle)
 
-| command(Throttle or Brake) | speed | accceleration |
+| command(Throttle or Brake) | speed[m/s] | accceleration[m/s^2] |
 ------------------- | ------------------- | ------------------- | 
 | 0.0 | 0 | 0.0 |
 | .... | .... | .... |
