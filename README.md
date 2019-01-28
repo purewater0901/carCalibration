@@ -31,7 +31,7 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 You need accel, brake, speed, steer, leftWheelSpeed, rightWheelSpeed
 
 | %time | accel([0, 1]) | brake([0, 1]) | speed[m/s] | steer[rad] | leftWheelSpeed[rad/s] | rightWheelSpeed[rad/s] | 
------ | ----- | ----- | ----- | ----- | -----| ----- |
+----- | ------- | ------- | ----- | ----- | -----| ----- |
 | 0 | 0 | 0.4 | 0 | 0.2 | 0 | 0 |
 | ... | ... | ... | ... | ... | ... | ... |
 
