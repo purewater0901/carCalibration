@@ -49,7 +49,7 @@ You need x, y, z direction acceleration and pitch angle
 `python src/main.py`
 
 ### Output Csv
-- Output will be in the result directory
+- Result will output in the 'result/' directory 
 - Output csv file will be below. You will two type csv. (Brake and Throttle)
 
 | command(Throttle or Brake) | speed | accceleration |
