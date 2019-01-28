@@ -26,9 +26,11 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 
 ## Usage
 
-### Input CSV 
+### Input Csv
 | %time | accel | brake | speed | steer | leftWheelSpeed | rightWheelSpeed | 
 ----- | ----- | ----- | ----- | ----- | -----| ----- |
+| 0 | | 0 | 0.4 | 0 | 0.2 | 0 | 0 |
+| ... | ... | ... | ... | ... | ... | ... |
 
 - Prepare your csv File
 - copy csv file under the data directory
