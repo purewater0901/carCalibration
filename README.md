@@ -40,7 +40,7 @@ You need x, y, z direction acceleration and pitch angle
 
 | %time | x | y | z | pitch |
 ----- | ----- | ----- | ----- | 
-0 | 0 | 0 | -9.8 | 0 |
+| 0 | 0 | 0 | -9.8 | 0 |
 | ----- | ----- | ----- | ----- | ----- |
 
 - Prepare your csv File
