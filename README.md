@@ -30,7 +30,7 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 1. From Pacmod 
 You need accel, brake, speed, steer, leftWheelSpeed, rightWheelSpeed
 
-| %time | accel | brake | speed | steer | leftWheelSpeed | rightWheelSpeed | 
+| %time | accel([0, 1]) | brake([0, 1]) | speed[m/s] | steer[rad] | leftWheelSpeed[rad/s] | rightWheelSpeed[rad/s] | 
 ----- | ----- | ----- | ----- | ----- | -----| ----- |
 | 0 | 0 | 0.4 | 0 | 0.2 | 0 | 0 |
 | ... | ... | ... | ... | ... | ... | ... |
@@ -38,7 +38,7 @@ You need accel, brake, speed, steer, leftWheelSpeed, rightWheelSpeed
 2. From Imu
 You need x, y, z direction acceleration and pitch angle
 
-| %time | x | y | z | pitch |
+| %time | x[m/s^2] | y[m/s^2] | z[m/s^2] | pitch[rad] |
 ----- | ----- | ----- | ----- | ----- |
 | 0 | 0 | 0 | -9.8 | 0 |
 | .... | .... | .... | .... | .... |
