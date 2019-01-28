@@ -27,10 +27,21 @@ _carCalibration_ will show you how to build a data-driven longitudinal control s
 ## Usage
 
 ### Input Csv
+1. From Pacmod 
+You need accel, brake, speed, steer, leftWheelSpeed, rightWheelSpeed
+
 | %time | accel | brake | speed | steer | leftWheelSpeed | rightWheelSpeed | 
 ----- | ----- | ----- | ----- | ----- | -----| ----- |
-| 0 | | 0 | 0.4 | 0 | 0.2 | 0 | 0 |
+| 0 | 0 | 0.4 | 0 | 0.2 | 0 | 0 |
 | ... | ... | ... | ... | ... | ... | ... |
+
+2. From Imu
+You need x, y, z direction acceleration and pitch angle
+
+| %time | x | y | z | pitch |
+----- | ----- | ----- | ----- | 
+0 | 0 | 0 | -9.8 | 0 |
+| ----- | ----- | ----- | ----- | ----- |
 
 - Prepare your csv File
 - copy csv file under the data directory
