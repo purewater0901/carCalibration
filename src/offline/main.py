@@ -16,8 +16,8 @@ if len(sys.argv) > 4:
 
 else:
     pacmodFilePath = '/home/yutaka/carCalibration/data/pacmodLongTokyoDistrict.csv'
-    imuFilePath    = '/home/yutaka/carCalibration//data/imuLongTokyoDistrict.csv'
-    outputFilePath = '/home/yutaka/carCalibration/calibTable/result/'
+    imuFilePath    = '/home/yutaka/carCalibration/data/imuLongTokyoDistrict.csv'
+    outputFilePath = '/home/yutaka/carCalibration/result/'
 
 data = Process(imuFilePath, pacmodFilePath).getData()
 
