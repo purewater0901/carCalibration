@@ -1,7 +1,7 @@
 import sys
-from src.offline.tool.process import Process
-from src.offline.tool.throttle import Throttle
-from src.offline.tool.brake import Brake
+from tool.process import Process
+from tool.throttle import Throttle
+from tool.brake import Brake
 
 '''
 第1引数にpacmodのpath(defalut: ./data/pacmodLongTokyoDistrict.csv)
@@ -15,9 +15,9 @@ if len(sys.argv) > 4:
     outputFilePath = sys.argv[3]
 
 else:
-    pacmodFilePath = '/home/yutaka/carCalibration/data/pacmodLongTokyoDistrict.csv'
-    imuFilePath    = '/home/yutaka/carCalibration/data/imuLongTokyoDistrict.csv'
-    outputFilePath = '/home/yutaka/carCalibration/result/'
+    pacmodFilePath = '/home/ubuntu/carCalibration/data/pacmodLongTokyoDistrict.csv'
+    imuFilePath    = '/home/ubuntu/carCalibration/data/imuLongTokyoDistrict.csv'
+    outputFilePath = '/home/ubuntu/carCalibration/result/'
 
 data = Process(imuFilePath, pacmodFilePath).getData()
 
