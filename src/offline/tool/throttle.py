@@ -147,6 +147,6 @@ class Throttle:
                                'speed': self.speedResult.reshape(-1, ),
                                'acceleration': _accResult.reshape(-1, )})
 
-        output = output.round({'throttle': 2, 'acceleration': 2})
+        output = output.round({'throttle': 2, 'acceleration': 2, 'speed': 2})
 
         output.to_csv(self.resultDirectory + "throttle.csv", index=False)
