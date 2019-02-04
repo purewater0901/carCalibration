@@ -41,8 +41,9 @@ class Process:
         self.dfPacmod = self.dfPacmod.dropna()
 
         self.dfPacmod = self.dfPacmod[self.dfPacmod.speed > 0]  # 速度が0のところはとりあえず無視
-        self.dfPacmod["speed"] = (self.dfPacmod["leftWheelSpeed"] + self.dfPacmod[
-            "rightWheelSpeed"]) / 2  # 車速にwheelSpeedを用いる
+        self.dfPacmod["speed"] = (self.dfPacmod["leftWheelSpeed"]
+                                  + self.dfPacmod["rightWheelSpeed"]) / 2  # 車速にwheelSpeedを用いる
+        self.dfPacmod["speed"] = self.dfPacmod["speed"]/3.6
         self.dfImu["x"] = -1 * self.dfImu["x"]
 
         # 速度の移動平均を求める
