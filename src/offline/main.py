@@ -9,28 +9,23 @@ from src.offline.tool.brake import Brake
 第3引数に出力のディレクトリ(default: ./reslut)
 '''
 
+if len(sys.argv) > 4:
+    pacmodFilePath = sys.argv[1]
+    imuFilePath = sys.argv[2]
+    outputFilePath = sys.argv[3]
 
-def main():
-    if len(sys.argv) > 4:
-        pacmodFilePath = sys.argv[1]
-        imuFilePath = sys.argv[2]
-        outputFilePath = sys.argv[3]
+else:
+    pacmodFilePath = '/home/yutaka/carCalibration/data/pacmodLongTokyoDistrict.csv'
+    imuFilePath    = '/home/yutaka/carCalibration//data/imuLongTokyoDistrict.csv'
+    outputFilePath = '/home/yutaka/carCalibration/calibTable/result/'
 
-    else:
-        pacmodFilePath = './data/pacmodLongTokyoDistrict.csv'
-        imuFilePath = './data/imuLongTokyoDistrict.csv'
-        outputFilePath = './result/'
+data = Process(imuFilePath, pacmodFilePath).getData()
 
-    data = Process(imuFilePath, pacmodFilePath).getData()
+t = Throttle(data, outputFilePath)
+t.getGraphResult()
+t.getCsvResult()
 
-    t = Throttle(data, outputFilePath)
-    t.getGraphResult()
-    t.getCsvResult()
+b = Brake(data, outputFilePath)
+b.getGraphResult()
+b.getCsvResult()
 
-    b = Brake(data, outputFilePath)
-    b.getGraphResult()
-    b.getCsvResult()
-
-
-if __name__ == '__main__':
-    main()

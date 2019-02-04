@@ -11,8 +11,8 @@ from plotly.graph_objs import Scatter3d
 
 class Throttle:
 
-    def __init__(self, data, resultDirectory, speedGroupNum=10, throttleGroupNum=10, speedRange=80, throttleRange=1.0,
-                 speedInterval=1, throttleInterval=0.01, train=True, save=True):
+    def __init__(self, data, resultDirectory, speedGroupNum=10, throttleGroupNum=10, speedRange=20, throttleRange=1.0,
+                 speedInterval=0.1, throttleInterval=0.01, train=True, save=True):
         self.dfPacmod = data.copy()
         self.resultDirectory = resultDirectory
 
@@ -61,7 +61,7 @@ class Throttle:
             return 0
 
     def __throttleModelGrouping(self, speedGroupNum, throttleGroupNum):
-        self.dfPacmod = self.dfPacmod.query("0<speed<80 & accel>0.012 & accFiltered>0")
+        self.dfPacmod = self.dfPacmod.query("0<speed<20 & accel>0.012 & accFiltered>0")
 
         self.dfPacmod["speedKey"] = pd.cut(self.dfPacmod.speed, speedGroupNum,
                                            labels=[i + 1 for i in range(speedGroupNum)])
@@ -88,7 +88,7 @@ class Throttle:
         self.model = model
 
     def __createTrainingData(self):
-        self.dfPacmodTrain = self.dfPacmod.query("remove==0 & speed<80").copy()
+        self.dfPacmodTrain = self.dfPacmod.query("remove==0 & speed<20").copy()
         self._accMinNum = self.dfPacmodTrain["accFiltered"].min()
         self._accMaxNum = self.dfPacmodTrain["accFiltered"].max()
 
@@ -132,8 +132,8 @@ class Throttle:
                                    marker=dict(size=3, color="blue"), name="RemoveOutliers")
 
         layout = go.Layout(title="ThrottleModel", scene=dict(xaxis=dict(title="CMD(Throttle)", range=[0.1, 0.7]),
-                                                             yaxis=dict(title="speed", range=[80, 0]),
-                                                             zaxis=dict(title="acceleration", range=[0, 10])))
+                                                             yaxis=dict(title="speed", range=[20, 0]),
+                                                             zaxis=dict(title="acceleration", range=[0, 3])))
 
         fig = go.Figure(data=[_surface, _scatterRepresent, _scatterRemove], layout=layout)
 
